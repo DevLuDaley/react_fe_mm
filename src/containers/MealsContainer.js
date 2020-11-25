@@ -7,7 +7,7 @@ import MealsPage from './MealsPage';
 
 // import {fetchMeals} from '../actions/fetchMeals'
 // import NewMealForm from '../components/NewMealForm'
-// import Meal from '../components/Meal'
+import Meal from '../components/Meal'
 // import MealsList from '../components/MealsList'
 // import Home from '../components/Home'
 // import NewMealsContainer from '../containers/NewMealsContainer'
@@ -37,7 +37,7 @@ class MealsContainer extends Component {
 
             {/* <Route exact path='/meals/new' render={(routerProps) => <NewMealsContainer {...routerProps} meals={this.props.meals}/>}/> */}
             
-            {/* <Route exact path='/meals/:id' render={(routerProps) => <Meal {...routerProps} meals={this.props.meals}/>}/> */}
+            <Route exact path='/meals/:id' render={(routerProps) => <Meal {...routerProps} meals={this.props.meals}/>}/>
             
             </Switch>
         </Fragment> );
