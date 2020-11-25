@@ -28,12 +28,12 @@ class MealsContainer extends Component {
         return (
             <Fragment>
             <p> Meals Container</p>
-            <MealsPage/>
+            {/* <MealsPage/> */}
              {console.log('THIS.PROPS',this.props)}
             <Switch>
             {/* <Route path='/home' component={Home}/> */}
 
-            {/* <Route exact path='/meals' render={(routerProps) => <MealsList {...routerProps} meals={this.props.meals}/>}/> */}
+            <Route exact path='/meals' render={(routerProps) => <MealsPage {...routerProps} meals={this.props.meals}/>}/>
 
             {/* <Route exact path='/meals/new' render={(routerProps) => <NewMealsContainer {...routerProps} meals={this.props.meals}/>}/> */}
             

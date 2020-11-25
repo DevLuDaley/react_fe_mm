@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import fetchMeals from '../actions/fetchMeals'
+import MealsList from '../components/MealList';
 class MealsPage extends Component {
     constructor(props) {
         super(props);
@@ -13,6 +14,7 @@ class MealsPage extends Component {
     render() { 
         return (<>
         <p> Meals Page</p>
+        <MealsList meals={this.props.meals}/>
          </>  );
     }
 }
