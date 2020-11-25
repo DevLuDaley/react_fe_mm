@@ -10,9 +10,6 @@ export function fetchMeals() {
                 "Accept": "application/json"
             },
         })
-        // fetch('http://localhost:8080/herokuapp.com/https://hoop-drills.herokuapp.com/api/v1/meals')
-        // fetch('https://cors-anywhere.herokuapp.com/https://hoop-drills.herokuapp.com/api/v1/meals')
-        // fetch('https://cors-anywhere.hoop-drills.herokuapp.com/api/v1/meals')
         .then(resp => resp.json())
         .then(data => dispatch({
             type: 'FETCH_MEALS', payload: data}
