@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from 'react';
 import {connect} from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
+import MealPage from './MealPage';
 
 // import {fetchMeals} from '../actions/fetchMeals'
 // import NewMealForm from '../components/NewMealForm'
@@ -16,7 +17,7 @@ class MealsContainer extends Component {
         this.state = {  }
     }
     render() { 
-        return (<p>hello world</p>  );
+        return (<MealPage/>);
     }
 }
  
