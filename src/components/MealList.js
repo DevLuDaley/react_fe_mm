@@ -6,9 +6,9 @@ import {Link} from 'react-router-dom';
 const MealsList = (props)  => {
         return (
         <Fragment>
-        {console.log('MealsList -> props.meals', props.meals)}
+        {/* {console.log('MealsList -> props.meals', props.meals)} */}
             {props.meals && props.meals.map(meal => 
-            <ul key={meal.id} className='meals-list'>
+            <ul key={meal.id} className='meals-list' style={{listStyleType: 'none'}}>
                   <li key={meal.id}>
                       <Link to={`/meals/${meal.id}`}> 
                             {meal.name} 

@@ -4,12 +4,12 @@ import {Route, Switch} from 'react-router-dom'
 
 import {fetchMeals} from '../actions/fetchMeals'
 import MealsPage from './MealsPage';
+import Meal from '../components/Meal'
+// import Home from '../components/Home'
 
 // import {fetchMeals} from '../actions/fetchMeals'
 // import NewMealForm from '../components/NewMealForm'
-import Meal from '../components/Meal'
 // import MealsList from '../components/MealsList'
-// import Home from '../components/Home'
 // import NewMealsContainer from '../containers/NewMealsContainer'
 
 
@@ -17,11 +17,11 @@ class MealsContainer extends Component {
     constructor(props) {
         super(props);
         this.fetchMeals = fetchMeals
-        this.state = {meals: [] }
+        this.state = {meals: []}
     }
     componentDidMount(){
         this.props.fetchMeals()
-        console.log('THIS.PROPS',this.props)
+        console.log('THIS.PROPS', this.props)
         // this.fetchMeals()
     }
     render() { 
@@ -43,6 +43,7 @@ class MealsContainer extends Component {
         </Fragment> );
             
             
+            console.log('MealsContainer -> render -> this.props.meals', this.props.meals);
     }
 }
  

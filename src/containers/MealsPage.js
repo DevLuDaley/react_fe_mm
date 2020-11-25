@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import fetchMeals from '../actions/fetchMeals'
+// import fetchMeals from '../actions/fetchMeals'
 import MealsList from '../components/MealList';
-import NewMealForm from '../components/NewMealForm';
+import NewMealForm from '../forms/NewMealForm';
 
 
 class MealsPage extends Component {
