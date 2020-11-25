@@ -5,6 +5,7 @@ export default function mealReducer(
     switch (action.type) {
         case 'FETCH_MEALS':
             // return state
+            console.log('action.payload', action.payload);
             return {meals: action.payload}
         case 'ADD_MEAL':
             let mealId = action.payload.id // + 1
@@ -45,7 +46,7 @@ export default function mealReducer(
 // console.log(action.payload);
 
 
-        case 'ADD_MEAL_DRILL':
+        case 'ADD_MEAL_RECIPE':
             // let mealId = [action.payload.id -1]
             let mealDrills =  state.meals.map(meal => {
                 if (meal.id === action.payload.id) {
