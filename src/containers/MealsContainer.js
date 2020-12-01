@@ -5,7 +5,7 @@ import {Route, Switch} from 'react-router-dom'
 import {fetchMeals} from '../actions/fetchMeals'
 import MealsPage from './MealsPage';
 import Meal from '../components/Meal'
-import MealEdit from '../components/MealEdit'
+import UpdateMealPage from '../components/UpdateMealPage'
 // import Home from '../components/Home'
 
 // import {fetchMeals} from '../actions/fetchMeals'
@@ -42,7 +42,7 @@ class MealsContainer extends Component {
             // meal={this.props.meals[`:id`]-1}
              />}/>
 
-            <Route exact path='/meals/:id/edit' render={(routerProps) => <MealEdit {...routerProps} meals={this.props.meals}
+            <Route exact path='/meals/:id/edit' render={(routerProps) => <UpdateMealPage {...routerProps} meals={this.props.meals}
              />}/>
             
             </Switch>
