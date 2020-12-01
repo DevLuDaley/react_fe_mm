@@ -16,16 +16,20 @@ const Meal = (props) => {
             }, [props.name]);
             
 
-    console.log('Meal -> props.meals1', props.meals);
+    // console.log('Meal -> props.meals1', props.meals);
     // console.log('props here =>',props.meal.id);
     // console.log(`props`, props.id);
     // let meal = props.meals[props.match.params.id -1]
-    console.log('Meal -> props1', props);
+    // console.log('Meal -> props1', props);
     // console.log('Meal -> props1', meals)
     if (props.meals) {
     console.log('Meal -> props.meals2', props.meals);
 
-        var meal = props.meals.filter(meal => meal.id == props.match.params.id)[0]
+        // var meal = props.meals.filter(meal => meal.id == props.match.params.id)[0]
+            var mealId = parseInt(window.location.href.replace("http://localhost:3001/meals/", ""))
+
+    // var meal = props.meals.filter(meal => meal.id == mealId
+            var meal = props.meals.find(meal => meal.id == mealId)
         // [0]
         
         // console.log('Meal -> props.match.params.id)[0]', props.match.params.id[0])
