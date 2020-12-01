@@ -5,6 +5,7 @@ import {Route, Switch} from 'react-router-dom'
 import {fetchMeals} from '../actions/fetchMeals'
 import MealsPage from './MealsPage';
 import Meal from '../components/Meal'
+import MealEdit from '../components/MealEdit'
 // import Home from '../components/Home'
 
 // import {fetchMeals} from '../actions/fetchMeals'
@@ -37,7 +38,12 @@ class MealsContainer extends Component {
 
             {/* <Route exact path='/meals/new' render={(routerProps) => <NewMealsContainer {...routerProps} meals={this.props.meals}/>}/> */}
             
-            <Route exact path='/meals/:id' render={(routerProps) => <Meal {...routerProps} meals={this.props.meals}/>}/>
+            <Route exact path='/meals/:id' render={(routerProps) => <Meal {...routerProps} meals={this.props.meals} 
+            // meal={this.props.meals[`:id`]-1}
+             />}/>
+
+            <Route exact path='/meals/:id/edit' render={(routerProps) => <MealEdit {...routerProps} meals={this.props.meals}
+             />}/>
             
             </Switch>
         </Fragment> );
