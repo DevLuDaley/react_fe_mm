@@ -24,6 +24,19 @@
   color: white;
 }
 
+.meal-template{
+  /* background-color: #282c34; */
+  /* display: grid; */
+  /* align-items: center; */
+  /* justify-content: center; */
+  /* font-size: calc(10px + 2vmin); */
+  /* color: white; */
+  /* grid-template-columns: 50px 50px 50px 50px;
+  grid-template-rows: auto; */
+  /* grid-template-columns: 40px 50px auto 50px 40px; */
+  /* grid-template-rows: 25% 100px auto; */
+}
+
 .App-link {
   color: #61dafb;
 }
