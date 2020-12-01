@@ -12,8 +12,8 @@ export function fetchMeals() {
         })
         .then(resp => resp.json())
         .then(data => dispatch({
-            type: 'FETCH_MEALS', payload: data}
-        ))
+            type: 'FETCH_MEALS', payload: data
+        }))
     }
         
 // .then(jsonResponse =>
