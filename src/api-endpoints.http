@@ -1,0 +1,19 @@
+GET http://localhost:3000/api/v1/meals/
+###
+
+PATCH http://localhost:3000/api/v1/meals/9 HTTP/1.1
+
+Content-Type: application/json
+
+        {
+            "id":"9",
+            "name":"Big-Bagel-Bites",
+            "category":"Snack",
+            "url":"www.super-rando-link.org",
+            "image_url":"www.image-api.org",
+            "cooking_time":"145"
+        }
+###
+GET http://localhost:3000/api/v1/meals/
+
+###

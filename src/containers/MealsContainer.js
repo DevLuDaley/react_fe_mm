@@ -5,6 +5,8 @@ import {Route, Switch} from 'react-router-dom'
 import {fetchMeals} from '../actions/fetchMeals'
 import MealsPage from './MealsPage';
 import Meal from '../components/Meal'
+import UpdateMealPage from '../components/UpdateMealPage'
+import HomePage from '../components/HomePage'
 // import Home from '../components/Home'
 
 // import {fetchMeals} from '../actions/fetchMeals'
@@ -27,23 +29,31 @@ class MealsContainer extends Component {
     render() { 
         return (
             <Fragment>
-            <p> Meals Container</p>
+            {/* <p> Meals Container</p> */}
             {/* <MealsPage/> */}
              {console.log('THIS.PROPS',this.props)}
             <Switch>
-            {/* <Route path='/home' component={Home}/> */}
+            <Route path='/home' component={HomePage}/>
 
             <Route exact path='/meals' render={(routerProps) => <MealsPage {...routerProps} meals={this.props.meals}/>}/>
 
             {/* <Route exact path='/meals/new' render={(routerProps) => <NewMealsContainer {...routerProps} meals={this.props.meals}/>}/> */}
             
-            <Route exact path='/meals/:id' render={(routerProps) => <Meal {...routerProps} meals={this.props.meals}/>}/>
+            <Route exact path='/meals/:id' render={(routerProps) => <Meal {...routerProps} meals={this.props.meals}  
+            // meal={this.props.meals.find((meal) => { return meal.id == this.props.match.params.id})}
+            // meal={this.props.meals[this.props.match.params.id]-1}
+            meal={ this.props.meals ? this.props.meals[2] : null}
+            // meal={this.props.meals[`:id`]-1}
+             />}/>
+
+            <Route exact path='/meals/:id/edit' render={(routerProps) => <UpdateMealPage {...routerProps} meals={this.props.meals}
+             />}/>
             
             </Switch>
         </Fragment> );
             
             
-            console.log('MealsContainer -> render -> this.props.meals', this.props.meals);
+            // console.log('MealsContainer -> render -> this.props.meals', this.props.meals);
     }
 }
  

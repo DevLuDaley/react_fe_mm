@@ -1,6 +1,5 @@
 export default function mealReducer(
       state={}, action) {
-    //  state = {meals: []}, action) {
 // debugger;
     switch (action.type) {
         case 'FETCH_MEALS':
@@ -8,46 +7,29 @@ export default function mealReducer(
             console.log('action.payload', action.payload);
             return {meals: action.payload}
         case 'ADD_MEAL':
-            let mealId = action.payload.id // + 1
-            // console.log('mealReducer -> action.payload', action.payload);
-            // console.log('mealReducer -> action.payload.id', action.payload.id);
-            console.log('mealReducer -> mealId', mealId);
-            // let newMeal = state.meals[mealId]
+            let mealId = action.payload.id
             let newMeal = action.payload
-            // let newMeal = state.meals[9]
-            console.log('mealReducer -> newMeal', newMeal);
-            console.log('mealReducer -> state.meals 1', state.meals);
-            
-            // console.log('mealReducer -> state.meals[8]', state.meals[8]);
             // ! add new meal to list of meals
-            // state.meals.concat(newMeal)
-            // state.meals.push(newMeal)
-            // console.log('mealReducer -> state.meals[10]', state.meals[10]);
-            
-            // state.meals.push(action.payload)
-            // console.log('mealReducer -> newMeal AFTER PUSH', newMeal);
-            console.log('mealReducer -> state.meals 2', state.meals);
-            // let newLoad =  state.meals.map(meal => {
-                // meal.id === action.payload.id //{
-                    // return newMeal.payload
-                // } else {
-                    // debugger
-                    // return newMeal
-                // }
-                // console.log('mealReducer -> meal', meal);
-            // }
-                // )
-
-                // return {...state.meals, meals: state.meals}
+            // console.log('mealReducer -> state.meals 2', state.meals);
                 return {...state.meals, meals: state.meals.concat(newMeal)}
-                // return {...state, meals: action.payload}
-                // return {...state, meals:[...state.meals, action.payload]}
-                // debugger
-// console.log(action.payload);
 
+        case 'UPDATE_MEAL':
+            const payload = action.payload
+            const payloadId = action.payload.id
+            var currentMeal = state.meals.find(meal => meal.id == payloadId)
+            currentMeal = payload
+            const currentMeals = [...state.meals]
+            const updatedMeals = currentMeals[payloadId] = currentMeal
+            console.log('🚀 ~ file: mealReducer.js ~ line 30 ~ currentMeal', currentMeal);
+            console.log('🚀 ~ file: mealReducer.js ~ line 28 ~ state.meals  PART 1', state.meals);
+            console.log('🚀 ~ file: mealReducer.js ~ line 31 ~ action.payload', action.payload);
+            console.log('🚀 ~ file: mealReducer.js ~ line 33 ~ state.meals PART 2', state.meals);
+
+                return Object.assign({}, state, {meals: [currentMeals, updatedMeals]}
+      )
 
         case 'ADD_MEAL_RECIPE':
-            // let mealId = [action.payload.id -1]
+            
             let mealDrills =  state.meals.map(meal => {
                 if (meal.id === action.payload.id) {
                     return action.payload
@@ -63,20 +45,4 @@ export default function mealReducer(
             return state
     }
 
-                    // console.log('accountReducer -> ...state', [...state]);
-                // console.log('accountReducer -> state', state);
-                // console.log('accountReducer -> state.meal', state.meals[action.payload.id -1]);
-                // console.log('accountReducer -> state.meals[mealId]', state.meals[mealId]);
-                // console.log('accountReducer -> state.meals[mealId].drills', state.meals[mealId].drills);
-                // console.log('accountReducer -> action.payload', action.payload);
-                // return {...state, meal: [state.meals[mealId]].drills} //, action.payload]}
-                // } else {
-                    // return action.payload //meal
-        // }
-
-    //Meal.all.length || Meal.all.count
-// return state
-
 }
-
-// dispatch(actionObje) 
