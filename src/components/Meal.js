@@ -11,7 +11,7 @@ const Meal = (props) => {
     )
             // console.log('🚀 ~ file: Meal.js ~ line 35 ~ Meal ~ filtered', filtered);
     
-    console.log('🚀 ~ file: Meal.js ~ line 14 ~ filtered ~ filtered', filtered);
+    // console.log('🚀 ~ file: Meal.js ~ line 14 ~ filtered ~ filtered', filtered);
 }
     // filtered
     return(
@@ -35,7 +35,10 @@ const Meal = (props) => {
         'no meal here bub'
     }
     {/* <p>{filtered.name}</p> */}
-    <UpdateMealForm/>
+    {props.meals ? 
+    <UpdateMealForm currentMeal={props.meals.find(meal => 
+        meal.id == props.match.params.id)}/>
+    : null }
         </Fragment>
     )
 }
