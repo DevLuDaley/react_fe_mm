@@ -4,10 +4,10 @@ export default function mealReducer(
     switch (action.type) {
         case 'FETCH_MEALS':
             // return state
-            console.log('action.payload', action.payload);
+            // console.log('action.payload', action.payload);
             return {meals: action.payload}
         case 'ADD_MEAL':
-            let mealId = action.payload.id
+            // let mealId = action.payload.id
             let newMeal = action.payload
             // ! add new meal to list of meals
             // console.log('mealReducer -> state.meals 2', state.meals);
@@ -16,16 +16,20 @@ export default function mealReducer(
         case 'UPDATE_MEAL':
             const payload = action.payload
             const payloadId = action.payload.id
-            var currentMeal = state.meals.find(meal => meal.id == payloadId)
+            var currentMeal = state.meals.find(meal => meal.id === payloadId)
             currentMeal = payload
             const currentMeals = [...state.meals]
+            currentMeals[payloadId] = currentMeal
             const updatedMeals = currentMeals[payloadId] = currentMeal
-            console.log('🚀 ~ file: mealReducer.js ~ line 30 ~ currentMeal', currentMeal);
-            console.log('🚀 ~ file: mealReducer.js ~ line 28 ~ state.meals  PART 1', state.meals);
-            console.log('🚀 ~ file: mealReducer.js ~ line 31 ~ action.payload', action.payload);
-            console.log('🚀 ~ file: mealReducer.js ~ line 33 ~ state.meals PART 2', state.meals);
+            // console.log('🚀 ~ file: mealReducer.js ~ line 30 ~ currentMeal', currentMeal);
+            // console.log('🚀 ~ file: mealReducer.js ~ line 28 ~ state.meals  PART 1', state.meals);
+            // console.log('🚀 ~ file: mealReducer.js ~ line 31 ~ action.payload', action.payload);
+            // console.log('🚀 ~ file: mealReducer.js ~ line 33 ~ state.meals PART 2', state.meals);
 
-                return Object.assign({}, state, {meals: [currentMeals, updatedMeals]}
+            console.log('🚀 ~ file: mealReducer.js ~ line 37 ~ currentMeals', currentMeals);
+                return Object.assign({}, state, {meals: [[...state.meals], updatedMeals]}
+                // console.log('🚀 ~ file: mealReducer.js ~ line 30 ~ currentMeals[payloadId]', currentMeals[payloadId]);
+                // return Object.assign({}, state.meals, {meals: currentMeals, meal:currentMeals[payloadId] = currentMeal}
       )
 
         case 'ADD_MEAL_RECIPE':
