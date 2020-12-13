@@ -29,7 +29,7 @@ class MealsContainer extends Component {
     render() { 
         return (
             <Fragment>
-            <p> Meals Container</p>
+            {/* <p> Meals Container</p> */}
             {/* <MealsPage/> */}
              {console.log('THIS.PROPS',this.props)}
             <Switch>
