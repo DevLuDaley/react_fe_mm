@@ -6,6 +6,7 @@ import {fetchMeals} from '../actions/fetchMeals'
 import MealsPage from './MealsPage';
 import Meal from '../components/Meal'
 import UpdateMealPage from '../components/UpdateMealPage'
+import HomePage from '../components/HomePage'
 // import Home from '../components/Home'
 
 // import {fetchMeals} from '../actions/fetchMeals'
@@ -32,7 +33,7 @@ class MealsContainer extends Component {
             {/* <MealsPage/> */}
              {console.log('THIS.PROPS',this.props)}
             <Switch>
-            {/* <Route path='/home' component={Home}/> */}
+            <Route path='/home' component={HomePage}/>
 
             <Route exact path='/meals' render={(routerProps) => <MealsPage {...routerProps} meals={this.props.meals}/>}/>
 
