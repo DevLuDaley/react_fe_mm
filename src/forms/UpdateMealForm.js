@@ -21,14 +21,15 @@ class UpdateMealForm extends Component {
     // console.log('THIS.PROPS.MEALS',this.props)
     // console.log('THIS.PROPS',this.props.meals)
     // console.log('🚀 ~ file: UpdateMealForm.js ~ line 21 ~ UpdateMealForm ~ constructor ~ this.meal', this.meal)
+    console.log('🚀 ~ file: UpdateMealForm.js ~ line 25 ~ UpdateMealForm ~ constructor ~ props', props);
     this.state = {
         // meal:this.meal
         id: parseInt(window.location.href.replace("http://localhost:3001/meals/", "")),
-        name:'',
-        category:'',
-        url:'',
-        image_url:'',
-        cooking_time:''
+        name: props.currentMeal.name,
+        category:props.currentMeal.category,
+        url:props.currentMeal.url,
+        image_url:props.currentMeal.image_url,
+        cooking_time:props.currentMeal.cooking_time
         }
         // this.assignAndUpdateFields() 
     }
@@ -57,13 +58,13 @@ class UpdateMealForm extends Component {
         // debugger
         this.props.updateMeal(this.state)
         // alert(`${[this.state.name]} created!`)
-        this.setState({
-            name: '',
-            category: '',
-            url: '',
-            image_url: '',
-            cooking_time: ''
-        })
+        // this.setState({
+        //     name: '',
+        //     category: '',
+        //     url: '',
+        //     image_url: '',
+        //     cooking_time: ''
+        // })
     }
 
     // const fillFormPlaceholders = () => {}
