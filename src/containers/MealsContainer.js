@@ -38,7 +38,10 @@ class MealsContainer extends Component {
 
             {/* <Route exact path='/meals/new' render={(routerProps) => <NewMealsContainer {...routerProps} meals={this.props.meals}/>}/> */}
             
-            <Route exact path='/meals/:id' render={(routerProps) => <Meal {...routerProps} meals={this.props.meals} 
+            <Route exact path='/meals/:id' render={(routerProps) => <Meal {...routerProps} meals={this.props.meals}  
+            // meal={this.props.meals.find((meal) => { return meal.id == this.props.match.params.id})}
+            // meal={this.props.meals[this.props.match.params.id]-1}
+            meal={ this.props.meals ? this.props.meals[2] : null}
             // meal={this.props.meals[`:id`]-1}
              />}/>
 
@@ -49,7 +52,7 @@ class MealsContainer extends Component {
         </Fragment> );
             
             
-            console.log('MealsContainer -> render -> this.props.meals', this.props.meals);
+            // console.log('MealsContainer -> render -> this.props.meals', this.props.meals);
     }
 }
  
