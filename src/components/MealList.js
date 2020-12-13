@@ -4,6 +4,23 @@ import {Link} from 'react-router-dom';
 
 
 const MealsList = (props)  => {
+    const getCurrentMeal = () => {
+        props && props.meals.filter(meal => 
+        {
+            // var currentMeal
+            if (meal.id == props.match.params.id);
+            const currentMeal = meal
+            console.log('🚀 ~ file: Meal.js ~ line 100 ~ getMealByID ~ meal', meal);
+            console.log('🚀 ~ file: Meal.js ~ line 106 ~ getMealByID ~ currentMeal', currentMeal);
+            return( 
+            <p>
+                currentMeal
+                {/* {currentMeal} */}
+            </p>
+            )
+        }
+        )
+    }
         return (
         <Fragment>
         {/* {console.log('MealsList -> props.meals', props.meals)} */}
