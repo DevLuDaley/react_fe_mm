@@ -49,3 +49,78 @@
     transform: rotate(360deg);
   }
 }
+
+.nav {
+  display: block;
+  width: auto;
+  /* background-color: rgb(135, 167, 135); */
+  /* float: center; */
+  /* display: block; */
+
+  /* color: red; */
+  /* font: orange; */
+}
+
+nav a {
+  color: white;
+
+}
+
+nav li {
+  /* float: center; */
+  list-style-type: none;
+  /* background-color: rgb(78, 75, 75); */
+  display: block;
+  color: white;
+  /* text-align: center; */
+  padding: 14px 16px;
+  /* text-decoration: none; */
+  /* display: block; */
+  /* display: inline; */
+  /* padding: 8px; */
+  /* background-color: #dddddd; */
+  float: left;
+}
+
+ul {
+  /* list-style-type: none; */
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
+}
+
+li {
+  /* float: left; */
+}
+
+.meals-list a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  /* float: left; */
+}
+
+/* Change the link color to #111 (black) on hover */
+li a:hover {
+  background-color: #111;
+}
+
+.recipes-list {
+  /* background-color: rgb(62, 62, 110); */
+  /* color: white; */
+
+  /* color: rgb(173, 127, 127); */
+  color: black;
+
+}
+
+.meal-li {
+  /* background-color: rgb(62, 62, 110); */
+  /* background-color: rgb(135, 135, 236); */
+  /* color: rgb(173, 127, 127); */
+  color: black;
+
+}
