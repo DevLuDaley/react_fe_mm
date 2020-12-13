@@ -66,6 +66,7 @@ class UpdateMealForm extends Component {
         })
     }
 
+    // const fillFormPlaceholders = () => {}
 // export default connect(mapStateToProps)(App);
     render() {
         // this.loadMeals
@@ -73,14 +74,21 @@ class UpdateMealForm extends Component {
         <Fragment>
         <h3>
         UpdateMealForm
-    </h3>
+        </h3>
+            {
+                this.props.meals ?
+                this.props.meals.find(meal => 
+                    meal.id == this.props.match.params.id ? 
+                    meal.name : null) 
+                                : "null"}
+        
         {/* <MealsList/> */}
 
             {/* NewMealForm */}
             <form id='update-meal-form' onSubmit={this.handleSubmit}>
 
                 <label> Meal Name:</label> 
-                    <input type="text" placeholder='enter meal name...' value={this.state.name} name="name" onChange={this.handleChange}/>
+                    <input type="text" placeholder="hold-on" value={this.state.name} name="name" onChange={this.handleChange}/>
                 <label> Meal Category:</label> 
                     <input type="text" placeholder='enter category...' value={this.state.category} name="category" onChange={this.handleChange}/>
                 <label> Meal Url:</label> 
