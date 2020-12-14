@@ -2,6 +2,7 @@ import React, { Component, Fragment } from 'react'
 import { connect } from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
 import Meal from '../components/Meal'
+// import currentMeal from '../components/Meal'
 //import {Route, Switch, useLocation, withRouter} from 'react-router-dom'
 // import { createBrowserHistory } from "history";
 
