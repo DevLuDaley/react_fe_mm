@@ -33,7 +33,7 @@ class MealsContainer extends Component {
             {/* <MealsPage/> */}
              {console.log('THIS.PROPS',this.props)}
             <Switch>
-            <Route path='/home' component={HomePage}/>
+            <Route exact path='/' component={HomePage}/>
 
             <Route exact path='/meals' render={(routerProps) => <MealsPage {...routerProps} meals={this.props.meals}/>}/>
 
@@ -42,7 +42,7 @@ class MealsContainer extends Component {
             <Route exact path='/meals/:id' render={(routerProps) => <Meal {...routerProps} meals={this.props.meals}  
             // meal={this.props.meals.find((meal) => { return meal.id == this.props.match.params.id})}
             // meal={this.props.meals[this.props.match.params.id]-1}
-            meal={ this.props.meals ? this.props.meals[2] : null}
+            // meal={ this.props.meals ? this.props.meals[2] : null}
             // meal={this.props.meals[`:id`]-1}
              />}/>
 
