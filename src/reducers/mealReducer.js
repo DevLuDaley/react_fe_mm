@@ -31,6 +31,7 @@ export default function mealReducer(
 
         case 'DELETE_MEAL':
             const filteredMeals = state.meals.filter(meal => meal.id !== action.payload.id);
+            console.log('🚀 ~ file: mealReducer.js ~ line 34 ~ filteredMeals', filteredMeals);
             return {...state, meals: filteredMeals}
 
         case 'ADD_MEAL_RECIPE':
