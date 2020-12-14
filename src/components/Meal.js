@@ -5,11 +5,11 @@ import UpdateMealForm from '../forms/UpdateMealForm'
 
 const Meal = (props) => {
     if (props.meals){
-    const filtered = () => props.meals.filter((meal) => {
-        return meal.id == 2 
+    const filtered = props.meals.find((meal) => {
+        return meal.id == props.match.params.id 
     }
     )
-            // console.log('🚀 ~ file: Meal.js ~ line 35 ~ Meal ~ filtered', filtered);
+            console.log('🚀 ~ file: Meal.js ~ line 35 ~ Meal ~ filtered', filtered);
     
     // console.log('🚀 ~ file: Meal.js ~ line 14 ~ filtered ~ filtered', filtered);
 }
