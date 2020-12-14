@@ -6,6 +6,7 @@ export default function mealReducer(
             // return state
             console.log('action.payload', action.payload);
             return {meals: action.payload}
+
         case 'ADD_MEAL':
             let mealId = action.payload.id
             let newMeal = action.payload
@@ -28,10 +29,14 @@ export default function mealReducer(
                 return Object.assign({}, state, {meals: [currentMeals, updatedMeals]}
       )
 
+        case 'DELETE_MEAL':
+            const filteredMeals = state.meals.filter(meal => meal.id !== action.payload.id);
+            return {...state, meals: filteredMeals}
+
         case 'ADD_MEAL_RECIPE':
             
             let mealDrills =  state.meals.map(meal => {
-                if (meal.id === action.payload.id) {
+                if (meal.id == action.payload.id) {
                     return action.payload
                     } else {
                         return meal
@@ -41,7 +46,7 @@ export default function mealReducer(
             return {...state, meals: mealDrills}
 
         default:
-            console.log('accountReducer -> state', state);
+            // console.log('accountReducer -> state', state);
             return state
     }
 
