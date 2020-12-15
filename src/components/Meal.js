@@ -23,14 +23,48 @@ const Meal = (props) => {
         <br></br>
         id: {props.meals[props.match.params.id-2].id}
         <br></br> */}
-        MEAL:
+        Current Meal Info:
         {
             props.meals.map(meal => 
         meal.id == props.match.params.id ? 
-        <p>name: {meal.name} id: {meal.id} url: {meal.url}</p> 
-        : null )
+        <p>
+        <br></br>
+            id: {meal.id}
+        <br></br>
+            category: {meal.category} 
+        <br></br>
+            name: {meal.name} 
+        <br></br>
+            url: {meal.url}
+        <br></br>
+            image_url: {meal.image_url} 
+        <br></br>
+            cooking_time: {meal.cooking_time} minutes
+        <br></br>
+        <br></br>
+            <h3>Recipes:</h3> { 
+                meal.recipes.length > 0 ?
+                    meal.recipes.map(recipe =>
+                        <p>
+                            id: {recipe.id}
+                            <br></br>
+                            category: {recipe.category}
+                            <br></br>
+                            url: {recipe.url}
+                            name: {recipe.name}
+                            <br></br>
+                            cooking_time: {recipe.cooking_time} minutes
+                            <br></br>
+                            image_url: {recipe.image_url}
+                            <br></br>
+                        </p>
+                    ) : <p> No Recipes Created Yet </p>
+                    }
+                </p>
+                : null )
         }
-        </p> 
+        
+        </p>
         :
         'no meal here bub'
     }
