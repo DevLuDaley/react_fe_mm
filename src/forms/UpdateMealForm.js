@@ -55,20 +55,30 @@ class UpdateMealForm extends Component {
             </h3>
             <form onSubmit={this.handleSubmit} id='update-meal-form'>
 
-                <label> Meal Name:</label> 
+                <label> Meal Name: </label> 
                     <input type="text" placeholder="hold-on" value={this.state.name} name="name" onChange={this.handleChange}/>
+                <br></br>
+                <br></br>
 
-                <label> Meal Category:</label> 
+                <label> Meal Category: </label> 
                     <input type="text" placeholder='enter category...' value={this.state.category} name="category" onChange={this.handleChange}/>
+                <br></br>
+                <br></br>
 
-                <label> Meal Url:</label> 
+                <label> Meal Url: </label> 
                     <input type="text" placeholder='enter url...' value={this.state.url} name="url" onChange={this.handleChange}/>
+                <br></br>
+                <br></br>
 
-                <label> Meal Image Url:</label> 
+                <label> Meal Image Url: </label> 
                     <input type="text" placeholder='enter image url...' value={this.state.image_url} name="image_url" onChange={this.handleChange}/>
+                <br></br>
+                <br></br>
 
-                <label> Meal Cooking Time:</label> 
+                <label> Meal Cooking Time: </label> 
                     <input type="text" placeholder='enter cooking time...' value={this.state.cooking_time} name="cooking_time" onChange={this.handleChange}/>
+                <br></br>
+                <br></br>
 
                         <button type="submit">Update Meal</button>
             </form>
