@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import {Link} from 'react-router-dom';
+import { connect } from 'react-redux'
 // import Meal from '../components/Meal'
 import deleteMeal from '../actions/deleteMeal'
 
@@ -42,12 +43,12 @@ const MealsList = (props)  => {
         if (props.meals){
         const targetId = e.target.id
         const clickedMeal = props.meals.find(meal => meal.id == targetId)
-        deleteMeal(clickedMeal)
+        props.deleteMeal(clickedMeal)
 //      this.props.delete(clickedMeal)
-        console.log('🚀 ~ file: MealList.js ~ line 46 ~ deleteMeal ~ ', e.target )
-        console.log('🚀 ~ file: MealList.js ~ line 47 ~ targetId ~ ', targetId )
-        console.log('🚀 ~ file: MealList.js ~ line 47 ~ props.meals ~ ', props.meals )
-        console.log('🚀 ~ file: MealList.js ~ line 48 ~ clickedMeal ~ ', clickedMeal )
+        // console.log('🚀 ~ file: MealList.js ~ line 46 ~ deleteMeal ~ ', e.target )
+        // console.log('🚀 ~ file: MealList.js ~ line 47 ~ targetId ~ ', targetId )
+        // console.log('🚀 ~ file: MealList.js ~ line 47 ~ props.meals ~ ', props.meals )
+        // console.log('🚀 ~ file: MealList.js ~ line 48 ~ clickedMeal ~ ', clickedMeal )
         }
     }
         return (
@@ -62,11 +63,11 @@ const MealsList = (props)  => {
                                 {meal.recipes ? meal.recipes.length : null}
                             </button>
                       </Link>
+                  </li>
                             <button onClick={handleDeleteMeal} id={meal.id} className='btn-delete-meal'>
                             {/* <button onClick={deleteMeal} id={meal.id} className='btn-delete-meal'> */}
                                 Delete
                             </button>
-                  </li>
             </ul>
             )
             }
@@ -74,4 +75,4 @@ const MealsList = (props)  => {
         );
 }
  
-export default MealsList;
+export default connect(null, {deleteMeal}) (MealsList);
