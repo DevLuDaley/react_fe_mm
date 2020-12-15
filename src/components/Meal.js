@@ -4,15 +4,15 @@ import { connect , useSelector } from 'react-redux'
 import UpdateMealForm from '../forms/UpdateMealForm'
 
 const Meal = (props) => {
-    if (props.meals){
-    const filtered = props.meals.find((meal) => {
-        return meal.id == props.match.params.id 
-    }
-    )
-            console.log('🚀 ~ file: Meal.js ~ line 35 ~ Meal ~ filtered', filtered);
+//     if (props.meals){
+//     const filtered = props.meals.find((meal) => {
+//         return meal.id == props.match.params.id 
+//     }
+//     )
+//             // console.log('🚀 ~ file: Meal.js ~ line 35 ~ Meal ~ filtered', filtered);
     
-    // console.log('🚀 ~ file: Meal.js ~ line 14 ~ filtered ~ filtered', filtered);
-}
+//     // console.log('🚀 ~ file: Meal.js ~ line 14 ~ filtered ~ filtered', filtered);
+// }
     // filtered
     return(
     <Fragment>
@@ -35,8 +35,8 @@ const Meal = (props) => {
         'no meal here bub'
     }
     {/* <p>{filtered.name}</p> */}
-    {props.meals ? 
-    <UpdateMealForm currentMeal={props.meals.find(meal => 
+    {props.meals ?
+    <UpdateMealForm mealToUpdate={props.meals.find(meal => 
         meal.id == props.match.params.id)}/>
     : null }
         </Fragment>
