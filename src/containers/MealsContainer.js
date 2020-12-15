@@ -46,8 +46,8 @@ class MealsContainer extends Component {
             // meal={this.props.meals[`:id`]-1}
              />}/>
 
-            <Route exact path='/meals/:id/edit' render={(routerProps) => <UpdateMealPage {...routerProps} meals={this.props.meals}
-             />}/>
+            {/* <Route exact path='/meals/:id/edit' render={(routerProps) => <UpdateMealPage {...routerProps} meals={this.props.meals}
+             />}/> */}
             
             </Switch>
         </Fragment> );
