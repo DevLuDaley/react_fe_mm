@@ -16,6 +16,7 @@ const UpdateMealPage = (props) => {
             // }, [props.meals]);
 
     var mealId = parseInt(window.location.href.replace("http://localhost:3001/meals/", ""))
+    // var mealId = props.match.params.id
 
     // var meal = props.meals.filter(meal => meal.id == mealId
     var meal = props.meals.find(meal => meal.id == mealId)
