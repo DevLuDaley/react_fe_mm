@@ -1,8 +1,7 @@
-const intialState = {recipes: []}
+// const intialState = {recipes: []}
 
-export default function recipesReducer(
-      state = intialState, action) {
-// debugger;
+export default function recipesReducer(state = [], action) {
+// debugger
     switch (action.type) {
         case 'FETCH_RECIPES':
             return {recipes: action.payload}
@@ -32,7 +31,7 @@ export default function recipesReducer(
         //     return {...state, recipes: recipeRecipes}
 
         default:
-            return state
+            return {...state}
     }
 
 }
