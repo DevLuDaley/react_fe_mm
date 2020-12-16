@@ -6,18 +6,25 @@ import thunk from 'redux-thunk'
 import { Provider } from 'react-redux'
 import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
+import MealList from './components/MealList'
 import reportWebVitals from './reportWebVitals';
-import mealsReducer from './reducers/mealsReducer'
-import recipesReducer from './reducers/recipesReducer'
-import allReducers from './reducers/allReducers'
+// import mealsReducer from './reducers/mealsReducer'
+// import recipesReducer from './reducers/recipesReducer'
+import rootReducer from './reducers/allReducers'
+// import initialRootState from './reducers/allReducers'
 
 // const rootReducer = combineReducers({
 //     mealsReducer,
 //     recipesReducer
 // })
-const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const store = createStore(allReducers, composeEnhancers(applyMiddleware(thunk)))
+
+const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
+const initialRootState = {meals:[], recipes:[]};
+const store = createStore(rootReducer, initialRootState, composeEnhancer(applyMiddleware(thunk)))
+// const store = createStore(rootReducer, initialRootState, composeEnhancer(applyMiddleware(thunk)))
+// const store = createStore(allReducers, composeEnhancer(applyMiddleware(thunk)))
 // let store = createStore(mealsReducer, composeEnhancers(applyMiddleware(thunk)))
 // const store2 = createStore(recipesReducer, composeEnhancers(applyMiddleware(thunk)))
 // let store2 = createStore([mealsReducer, recipesReducer], composeEnhancers(applyMiddleware(thunk)))
@@ -27,17 +34,16 @@ console.log('🚀 ~ file: index.js ~ line 21 ~ store.getState()', store.getState
 
 
 
+// ReactDOM.render(
+//   <Router><React.StrictMode><App /></React.StrictMode></Router>,
+//   document.getElementById('root')
+// );
 ReactDOM.render(
-  <Router>
-  <React.StrictMode>
-  <Provider store={store} 
-  // store2={store2}
-  >
-    <App />
-  </Provider>
-  </React.StrictMode>
-  </Router>
-  ,
+  <Provider store={store}>
+  <Router><React.StrictMode>
+  <App/>
+  </React.StrictMode></Router>,
+  </Provider>,
   document.getElementById('root')
 );
 
@@ -45,6 +51,12 @@ ReactDOM.render(
 // to log results (for example: reportWebVitals(console.log))
 // or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals();
+
+// store.dispatch({
+//   type: 'FETCH_RECIPES',
+//   text: 'Use Redux'
+// })
+// console.log(store.getState())
 
 // export App = () => {
     // ONLY NOW does it make sense to try to access the store/dispatch actions
