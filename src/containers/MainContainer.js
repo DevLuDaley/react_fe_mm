@@ -18,17 +18,20 @@ import RecipesContainer from './RecipesContainer'
 
 
 class MainContainer extends Component {
+    // constructor(props) {
+    //     super(props);
     constructor(props) {
         super(props);
         // this.fetchMeals = fetchMeals
+        console.log('🚀 ~ file: MainContainer.js ~ line 24 ~ MainContainer ~ CONSTRUCTOR ~ props', props);
         // this.state = {meals: []}
     }
-    componentDidMount(){
-        // this.props.fetchMeals()
-        // console.log('THIS.PROPS 1', this.props)
-        // console.log('THIS.STATE', this.state)
-        // this.fetchMeals()
-    }
+    // componentDidMount(){
+    //     // this.props.fetchMeals()
+    //     // console.log('THIS.PROPS 1', this.props)
+    //     // console.log('THIS.STATE', this.state)
+    //     // this.fetchMeals()
+    // }
     render() { 
         return (
             <Fragment>
@@ -36,8 +39,8 @@ class MainContainer extends Component {
                     <Route exact path='/' component={HomePage}/>
                 </Switch>
 
-                <RecipesContainer/>
-                <MealsContainer/>
+                <RecipesContainer recipes={this.props.recipes}/>
+                <MealsContainer meals={this.props.meals}/>
             </Fragment> );
             
             
@@ -46,15 +49,17 @@ class MainContainer extends Component {
 }
  
 //! redux store
-const mapStateToProps = state => {
-    console.log('state.meals', state.meals);
-    return(
-        {
-            meals: state.meals
-        }
-    )
-}
+// const mapStateToProps = state => {
+//     console.log('state.meals', state.meals);
+//     return(
+//         {
+//             meals: state.meals
+//         }
+//     )
+// }
 
  
-export default connect(mapStateToProps, {fetchMeals})(MainContainer);
+export default MainContainer;
+// export default connect(null)(MainContainer);
+// export default connect(mapStateToProps, {fetchMeals})(MainContainer);
 
