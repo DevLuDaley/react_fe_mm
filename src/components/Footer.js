@@ -1,11 +1,18 @@
-import React from "react";
+import React, { Fragment }from 'react'
+import {Route, Switch, Link} from 'react-router-dom'
+
+
 
 function Footer() {
   return (
-    <div>
-    <br></br>
-      <h1>Footer</h1>
-    </div>
+       <Fragment>
+        <footer className='nav'>
+
+         <ul style={{listStyleType: 'none'}}>
+            <h2>Footer</h2>
+        </ul>
+        </footer>
+        </Fragment>
   );
 }
 
