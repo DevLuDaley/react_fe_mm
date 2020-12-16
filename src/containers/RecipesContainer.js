@@ -3,7 +3,7 @@ import {connect} from 'react-redux'
 import {Route, Switch} from 'react-router-dom'
 
 import {fetchRecipes} from '../actions/fetchRecipes'
-// import RecipesPage from './RecipesPage';
+import RecipesPage from './RecipesPage';
 import Recipe from '../components/Recipe'
 import UpdateRecipePage from '../components/UpdateRecipePage'
 // import HomePage from '../components/HomePage'
@@ -35,7 +35,7 @@ class RecipesContainer extends Component {
             <Switch>
             {/* <Route exact path='/' component={HomePage}/> */}
 
-            {/* <Route exact path='/recipes' render={(routerProps) => <RecipesPage {...routerProps} recipes={this.props.recipes}/>}/> */}
+            <Route exact path='/recipes' render={(routerProps) => <RecipesPage {...routerProps} recipes={this.props.recipes}/>}/>
 
             {/* <Route exact path='/recipes/new' render={(routerProps) => <NewRecipesContainer {...routerProps} recipes={this.props.recipes}/>}/> */}
             
