@@ -14,6 +14,7 @@ const Navbar = () => {
                     <ul style={{listStyleType: 'none'}}>
                             <Link to={`/`}> <li> Home </li> </Link> 
                             <Link to={`/meals`}> <li> Meals </li> </Link> 
+                            <Link to={`/recipes`}> <li> Recipes </li> </Link> 
                             {/* <Link to={`/meals/new`}> <li> New Routine </li> </Link>  */}
                     </ul>
                 </nav>
