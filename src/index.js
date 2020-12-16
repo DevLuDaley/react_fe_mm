@@ -8,10 +8,10 @@ import { BrowserRouter as Router } from 'react-router-dom';
 import App from './App';
 import MealList from './components/MealList'
 import reportWebVitals from './reportWebVitals';
-// import mealsReducer from './reducers/mealsReducer'
-// import recipesReducer from './reducers/recipesReducer'
+import mealsReducer from './reducers/mealsReducer'
+import recipesReducer from './reducers/recipesReducer'
 import rootReducer from './reducers/allReducers'
-// import initialRootState from './reducers/allReducers'
+import initialRootState from './reducers/allReducers'
 
 // const rootReducer = combineReducers({
 //     mealsReducer,
@@ -21,11 +21,11 @@ import rootReducer from './reducers/allReducers'
 
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-const initialRootState = {meals:[], recipes:[]};
-const store = createStore(rootReducer, initialRootState, composeEnhancer(applyMiddleware(thunk)))
+// initialRootState = {meals:[], recipes:[]};
+// const store = createStore(rootReducer, composeEnhancer(applyMiddleware(thunk)))
 // const store = createStore(rootReducer, initialRootState, composeEnhancer(applyMiddleware(thunk)))
 // const store = createStore(allReducers, composeEnhancer(applyMiddleware(thunk)))
-// let store = createStore(mealsReducer, composeEnhancers(applyMiddleware(thunk)))
+let store = createStore(mealsReducer, composeEnhancer(applyMiddleware(thunk)))
 // const store2 = createStore(recipesReducer, composeEnhancers(applyMiddleware(thunk)))
 // let store2 = createStore([mealsReducer, recipesReducer], composeEnhancers(applyMiddleware(thunk)))
 // const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
