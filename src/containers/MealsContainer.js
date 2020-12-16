@@ -23,7 +23,8 @@ class MealsContainer extends Component {
     }
     componentDidMount(){
         this.props.fetchMeals()
-        console.log('THIS.PROPS', this.props)
+        console.log('THIS.PROPS 1', this.props)
+        console.log('THIS.STATE', this.state)
         // this.fetchMeals()
     }
     render() { 
@@ -31,7 +32,7 @@ class MealsContainer extends Component {
             <Fragment>
             {/* <p> Meals Container</p> */}
             {/* <MealsPage/> */}
-             {console.log('THIS.PROPS',this.props)}
+             {console.log('THIS.PROPS 2',this.props)}
             <Switch>
             <Route exact path='/' component={HomePage}/>
 
@@ -59,7 +60,7 @@ class MealsContainer extends Component {
  
 //! redux store
 const mapStateToProps = state => {
-    // console.log('state.meals', state.meals);
+    console.log('state.meals', state.meals);
     return(
         {
             meals: state.meals
