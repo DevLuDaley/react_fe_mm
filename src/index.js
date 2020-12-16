@@ -17,9 +17,9 @@ import allReducers from './reducers/allReducers'
 // })
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
-// const store = createStore(allReducers, composeEnhancrers(applyMiddleware(thunk)))
-let store = createStore(mealsReducer, composeEnhancers(applyMiddleware(thunk)))
-const store2 = createStore(recipesReducer, composeEnhancers(applyMiddleware(thunk)))
+const store = createStore(allReducers, composeEnhancers(applyMiddleware(thunk)))
+// let store = createStore(mealsReducer, composeEnhancers(applyMiddleware(thunk)))
+// const store2 = createStore(recipesReducer, composeEnhancers(applyMiddleware(thunk)))
 // let store2 = createStore([mealsReducer, recipesReducer], composeEnhancers(applyMiddleware(thunk)))
 // const store = createStore(rootReducer, composeEnhancers(applyMiddleware(thunk)))
 
@@ -30,7 +30,9 @@ console.log('🚀 ~ file: index.js ~ line 21 ~ store.getState()', store.getState
 ReactDOM.render(
   <Router>
   <React.StrictMode>
-  <Provider store={store} store2={store2}>
+  <Provider store={store} 
+  // store2={store2}
+  >
     <App />
   </Provider>
   </React.StrictMode>
