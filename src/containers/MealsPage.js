@@ -1,13 +1,13 @@
 import React, { Component } from 'react'
 // import fetchMeals from '../actions/fetchMeals'
-import MealsList from '../components/MealList';
+import MealsList from '../components/MealsList';
 import NewMealForm from '../forms/NewMealForm';
 
 
 class MealsPage extends Component {
     constructor(props) {
         super(props);
-        this.state = {  }
+        this.state = []
     }
 
 
