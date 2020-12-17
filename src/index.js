@@ -11,8 +11,8 @@ import MealList from './components/MealsList'
 import reportWebVitals from './reportWebVitals';
 import mealsReducer from './reducers/mealsReducer'
 import recipesReducer from './reducers/recipesReducer'
-import rootReducer from './reducers/allReducers'
-import initialRootState from './reducers/allReducers'
+import rootReducer from './reducers/reducers'
+import initialRootState from './reducers/reducers'
 
 // const rootReducer = combineReducers({
 //     mealsReducer,
