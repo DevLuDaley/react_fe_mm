@@ -64,7 +64,7 @@ const MealsList = (props)  => {
                             </button>
                       </Link>
                   </li>
-                            <button onClick={handleDeleteMeal} id={meal.id} className='btn-delete-meal'>
+                            <button onClick={handleDeleteMeal} id={`btn-delete-meal-${meal.id}`} className='btn-delete-meal'>
                             {/* <button onClick={deleteMeal} id={meal.id} className='btn-delete-meal'> */}
                                 Delete
                             </button>
@@ -74,5 +74,5 @@ const MealsList = (props)  => {
         </Fragment>
         );
 }
- 
+
 export default connect(null, {deleteMeal}) (MealsList);
