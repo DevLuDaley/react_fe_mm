@@ -26,7 +26,7 @@ class App extends Component {
   return (
     <div className="App">
         <MainContainer meals={this.props.meals} recipes={this.props.recipes} className='main-container'/>
-        <MealsPage/>
+        {/* <MealsPage/> */}
         
     </div>
   );
