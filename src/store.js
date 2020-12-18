@@ -6,10 +6,10 @@ import thunk from 'redux-thunk'
 //  import reportWebVitals from './reportWebVitals';
 
 
-// const reducer = combineReducers({
-//     mealReducer,
-//     recipeReducer
-// })
+const reducer = combineReducers({
+    mealsReducer,
+    recipesReducer
+})
 
 // const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
@@ -22,6 +22,6 @@ import thunk from 'redux-thunk'
 
 // const store = createStore(reducer, composeEnhancers(applyMiddleware(thunk)))
 
-export default store
+export default reducer
 
 // reportWebVitals();
