@@ -35,7 +35,7 @@ class MealsContainer extends Component {
             {/* <MealsPage/> */}
              {/* {console.log('THIS.PROPS 2',this.props)} */}
             <Switch>
-            <Route exact path='/' component={HomePage}/>
+            {/* <Route exact path='/' component={HomePage}/> */}
 
             <Route exact path='/meals' render={(routerProps) => <MealsPage {...routerProps} meals={this.props.meals}/>}/>
 
