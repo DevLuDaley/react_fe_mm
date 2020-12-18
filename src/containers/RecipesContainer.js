@@ -26,7 +26,7 @@ class RecipesContainer extends Component {
         console.log('THIS.PROPS', this.props)
         // this.fetchRecipes()
     }
-    render() { 
+    render() {
         return (
             <Fragment>
             {/* <p> Recipes Container</p> */}
@@ -59,10 +59,11 @@ class RecipesContainer extends Component {
  
 //! redux store
 const mapStateToProps = state => {
-    // console.log('state.recipes', state.recipes);
+    console.log('state.meals', state.meals);
     return(
         {
-            recipes: state.recipes
+            meals: state.mealsReducer.meals,
+            recipes: state.recipesReducer.recipes
         }
     )
 }
