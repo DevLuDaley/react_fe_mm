@@ -60,11 +60,11 @@ const RecipesList = (props)  => {
                       <Link to={`/recipes/${recipe.id}`}>
                             {recipe.name}
                             <button>
-                                {recipe.recipes ? recipe.recipes.length : null}
+                                {recipe ? recipe.name.length : null}
                             </button>
                       </Link>
                   </li>
-                            <button onClick={handleDeleteRecipe} id={recipe.id} className='btn-delete-recipe'>
+                            <button onClick={handleDeleteRecipe} id={`btn-delete-recipe-${recipe.id}`} className='btn-delete-recipe'>
                             {/* <button onClick={deleteRecipe} id={recipe.id} className='btn-delete-recipe'> */}
                                 Delete
                             </button>
@@ -74,5 +74,5 @@ const RecipesList = (props)  => {
         </Fragment>
         );
 }
- 
+
 export default connect(null, {deleteRecipe}) (RecipesList);
