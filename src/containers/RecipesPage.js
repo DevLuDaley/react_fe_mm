@@ -1,7 +1,9 @@
 import React, { Component } from 'react'
+// import './RecipesPage.css'
+// import '../App.css'
 // import fetchRecipes from '../actions/fetchRecipes'
 import RecipesList from '../components/RecipesList';
-// import NewRecipeForm from '../forms/NewRecipeForm';
+import NewRecipeForm from '../forms/NewRecipeForm';
 
 
 class RecipesPage extends Component {
@@ -17,9 +19,9 @@ class RecipesPage extends Component {
     render() { 
         return (<>
         <p> Recipes Page</p>
-        {/* <NewRecipeForm recipes={this.props.recipes}/> */}
+        <NewRecipeForm recipes={this.props.recipes}/>
         <RecipesList recipes={this.props.recipes}/>
-        {console.log('🚀 ~ file: RecipesPage.js ~ line 22 ~ RecipesPage ~ render ~ this.props.recipes', this.props.recipes)}
+        {/* {console.log('🚀 ~ file: RecipesPage.js ~ line 22 ~ RecipesPage ~ render ~ this.props.recipes', this.props.recipes)} */}
          </>  );
     }
 }
