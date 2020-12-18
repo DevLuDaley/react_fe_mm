@@ -70,8 +70,10 @@ const Meal = (props) => {
     }
     {/* <p>{filtered.name}</p> */}
     {props.meals ?
-    <UpdateMealForm mealToUpdate={props.meals.find(meal => 
-        meal.id == props.match.params.id)}/>
+    <UpdateMealForm />
+    //mealToUpdate={props.meals.find(meal => 
+    //     meal.id == props.match.params.id)}
+
     : null }
         </Fragment>
     )
