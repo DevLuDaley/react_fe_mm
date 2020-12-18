@@ -39,7 +39,6 @@ class MainContainer extends Component {
                     <Switch>
                         <Route exact path='/' component={HomePage}/>
                     </Switch>
-
                 <RecipesContainer recipes={this.props.recipes}/>
                 <MealsContainer meals={this.props.meals}/>
                 <Footer id="footer"/>
