@@ -39,16 +39,11 @@ const MealsList = (props)  => {
 
 
     const handleDeleteMeal = (e) => {
-        // e.preventDefault()
         if (props.meals){
-        const targetId = e.target.id
+        const targetId = e.target.id.replace("btn-delete-meal-", "")
         const clickedMeal = props.meals.find(meal => meal.id == targetId)
         props.deleteMeal(clickedMeal)
 //      this.props.delete(clickedMeal)
-        // console.log('🚀 ~ file: MealList.js ~ line 46 ~ deleteMeal ~ ', e.target )
-        // console.log('🚀 ~ file: MealList.js ~ line 47 ~ targetId ~ ', targetId )
-        // console.log('🚀 ~ file: MealList.js ~ line 47 ~ props.meals ~ ', props.meals )
-        // console.log('🚀 ~ file: MealList.js ~ line 48 ~ clickedMeal ~ ', clickedMeal )
         }
     }
         return (
