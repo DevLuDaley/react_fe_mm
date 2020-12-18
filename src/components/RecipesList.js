@@ -39,16 +39,10 @@ const RecipesList = (props)  => {
 
 
     const handleDeleteRecipe = (e) => {
-        // e.preventDefault()
         if (props.recipes){
-        const targetId = e.target.id
+        const targetId = e.target.id.replace("btn-delete-recipe-", "")
         const clickedRecipe = props.recipes.find(recipe => recipe.id == targetId)
         props.deleteRecipe(clickedRecipe)
-//      this.props.delete(clickedRecipe)
-        // console.log('🚀 ~ file: RecipeList.js ~ line 46 ~ deleteRecipe ~ ', e.target )
-        // console.log('🚀 ~ file: RecipeList.js ~ line 47 ~ targetId ~ ', targetId )
-        // console.log('🚀 ~ file: RecipeList.js ~ line 47 ~ props.recipes ~ ', props.recipes )
-        // console.log('🚀 ~ file: RecipeList.js ~ line 48 ~ clickedRecipe ~ ', clickedRecipe )
         }
     }
         return (
@@ -60,7 +54,7 @@ const RecipesList = (props)  => {
                       <Link to={`/recipes/${recipe.id}`}>
                             {recipe.name}
                             <button>
-                                {recipe ? recipe.name.length : null}
+                                {recipe ? recipe.id : null}
                             </button>
                       </Link>
                   </li>

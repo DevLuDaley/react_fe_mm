@@ -1,4 +1,5 @@
 export const deleteMeal = (mealData) => {
+console.log('🚀 ~ file: deleteMeal.js ~ line 2 ~ deleteMeal ~ mealData', mealData);
     const baseUrl = 'http://localhost:3000/api/v1/meals/'
     const deleteMealUrl = (baseUrl + mealData.id)
     // console.log('🚀 ~ file: deleteMeal.js ~ line 3 ~ deleteMeal ~ baseUrl', baseUrl);
