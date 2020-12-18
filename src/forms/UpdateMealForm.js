@@ -15,8 +15,8 @@ import {updateMeal} from '../actions/updateMeal'
 class UpdateMealForm extends Component {
     constructor(props) {
     super(props)
-    console.log('🚀 ~ file: UpdateMealForm.js ~ line 19 ~ UpdateMealForm ~ constructor ~ props', props);
-    console.log('🚀 ~ file: UpdateMealForm.js ~ line 19 ~ UpdateMealForm ~ constructor ~ props', props.mealToUpdate);
+    // console.log('🚀 ~ file: UpdateMealForm.js ~ line 19 ~ UpdateMealForm ~ constructor ~ props', props);
+    // console.log('🚀 ~ file: UpdateMealForm.js ~ line 19 ~ UpdateMealForm ~ constructor ~ props', props.mealToUpdate);
     this.state = {
         // id: parseInt(window.location.href.replace("http://localhost:3001/meals/", "")),
         // id: props.match.params.id,
@@ -29,7 +29,7 @@ class UpdateMealForm extends Component {
         // , mealToUpdate:
         }
         // this.assignAndUpdateFields() 
-            console.log('🚀 ~ file: UpdateMealForm.js ~ line 25 ~ UpdateMealForm ~ constructor ~ props', this.props);
+            // console.log('🚀 ~ file: UpdateMealForm.js ~ line 25 ~ UpdateMealForm ~ constructor ~ props', this.props);
     }
 
     // assignAndUpdateFields(){
@@ -98,7 +98,7 @@ class UpdateMealForm extends Component {
 
 const mapStateToProps = (state, ownProps) => {
     const EditMealId = parseInt(window.location.href.replace("http://localhost:3001/meals/", ""))
-    console.log('🚀 ~ file: UpdateMealForm.js ~ line 93 ~ mapStateToProps ~ EditMealId', EditMealId);
+    // console.log('🚀 ~ file: UpdateMealForm.js ~ line 93 ~ mapStateToProps ~ EditMealId', EditMealId);
     return {
         meals: state.mealsReducer.meals,
         mealToUpdate: state.mealsReducer.meals.find(meal => meal.id == EditMealId)

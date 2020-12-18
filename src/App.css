@@ -104,6 +104,14 @@ li {
   text-decoration: none;
   /* float: left; */
 }
+.recipes-list a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  /* float: left; */
+}
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
