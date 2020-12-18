@@ -9,7 +9,7 @@ import NewRecipeForm from '../forms/NewRecipeForm';
 class RecipesPage extends Component {
     constructor(props) {
         super(props);
-        this.state = []
+        this.state = {}
     }
 
 
