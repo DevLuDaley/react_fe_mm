@@ -23,7 +23,7 @@ class RecipesContainer extends Component {
     }
     componentDidMount(){
         this.props.fetchRecipes()
-        console.log('THIS.PROPS', this.props)
+        // console.log('THIS.PROPS', this.props)
         // this.fetchRecipes()
     }
     render() {
@@ -31,7 +31,7 @@ class RecipesContainer extends Component {
             <Fragment>
             {/* <p> Recipes Container</p> */}
             {/* <RecipesPage/> */}
-             {console.log('THIS.PROPS',this.props)}
+             {/* {console.log('THIS.PROPS',this.props)} */}
             <Switch>
             {/* <Route exact path='/' component={HomePage}/> */}
 
