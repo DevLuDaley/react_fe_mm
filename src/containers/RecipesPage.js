@@ -21,8 +21,7 @@ class RecipesPage extends Component {
         <p> Recipes Page</p>
         <NewRecipeForm recipes={this.props.recipes}/>
         <RecipesList recipes={this.props.recipes}/>
-        {/* {console.log('🚀 ~ file: RecipesPage.js ~ line 22 ~ RecipesPage ~ render ~ this.props.recipes', this.props.recipes)} */}
-         </>  );
+         </>);
     }
 }
  
