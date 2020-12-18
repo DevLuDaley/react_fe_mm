@@ -6,6 +6,7 @@ import {fetchMeals} from '../actions/fetchMeals'
 import MealsPage from './MealsPage';
 import Meal from '../components/Meal'
 import UpdateMealPage from '../components/UpdateMealPage'
+import UpdateMealForm from '../forms/UpdateMealForm'
 import HomePage from '../components/HomePage'
 // import Home from '../components/Home'
 
@@ -22,9 +23,9 @@ class MealsContainer extends Component {
         this.state = {meals: []}
     }
     componentDidMount(){
-        console.log('THIS.PROPS 1', this.props)
+        // console.log('THIS.PROPS 1', this.props)
         this.props.fetchMeals()
-        console.log('THIS.STATE', this.state)
+        // console.log('THIS.STATE', this.state)
         // this.fetchMeals()
     }
     render() { 
@@ -32,7 +33,7 @@ class MealsContainer extends Component {
             <Fragment>
             {/* <p> Meals Container</p> */}
             {/* <MealsPage/> */}
-             {console.log('THIS.PROPS 2',this.props)}
+             {/* {console.log('THIS.PROPS 2',this.props)} */}
             <Switch>
             <Route exact path='/' component={HomePage}/>
 
@@ -46,6 +47,8 @@ class MealsContainer extends Component {
             // meal={ this.props.meals ? this.props.meals[2] : null}
             // meal={this.props.meals[`:id`]-1}
              />}/>
+            {/* <Route exact path='/mealy' render={(routerProps) => <UpdateMealForm {...routerProps} meals={this.props.meals}
+             />}/> */}
 
             {/* <Route exact path='/meals/:id/edit' render={(routerProps) => <UpdateMealPage {...routerProps} meals={this.props.meals}
              />}/> */}
@@ -60,7 +63,6 @@ class MealsContainer extends Component {
  
 //! redux store
 const mapStateToProps = state => {
-    console.log('state.meals', state.meals);
     return(
         {
             meals: state.mealsReducer.meals,
@@ -68,7 +70,6 @@ const mapStateToProps = state => {
         }
     )
 }
-
  
 export default connect(mapStateToProps, {fetchMeals})(MealsContainer);
 
