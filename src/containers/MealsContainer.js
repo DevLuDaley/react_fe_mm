@@ -22,8 +22,8 @@ class MealsContainer extends Component {
         this.state = {meals: []}
     }
     componentDidMount(){
-        this.props.fetchMeals()
         console.log('THIS.PROPS 1', this.props)
+        this.props.fetchMeals()
         console.log('THIS.STATE', this.state)
         // this.fetchMeals()
     }
@@ -63,7 +63,8 @@ const mapStateToProps = state => {
     console.log('state.meals', state.meals);
     return(
         {
-            meals: state.meals
+            meals: state.mealsReducer.meals,
+            recipes: state.recipesReducer.recipes
         }
     )
 }
