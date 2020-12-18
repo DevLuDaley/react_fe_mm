@@ -7,7 +7,7 @@ import NewMealForm from '../forms/NewMealForm';
 class MealsPage extends Component {
     constructor(props) {
         super(props);
-        this.state = []
+        this.state = {}
     }
 
 
