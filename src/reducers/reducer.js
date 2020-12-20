@@ -2,6 +2,7 @@ import { combineReducers } from 'redux';
 // import { configureStore } from '@reduxjs/toolkit';
 import mealsReducer from './mealsReducer'
 import recipesReducer from './recipesReducer'
+import loadRecipesReducer from './loadRecipesReducer'
 
 // export default configureStore({
     //     reducer:{
@@ -26,7 +27,8 @@ import recipesReducer from './recipesReducer'
 
 const rootReducer = combineReducers({
     mealsReducer,
-    recipesReducer
+    recipesReducer,
+    loadRecipesReducer
 })
 
 export default rootReducer
