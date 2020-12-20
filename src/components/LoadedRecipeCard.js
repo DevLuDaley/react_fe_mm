@@ -1,65 +1,65 @@
 import React from 'react'
 
-const LoadedRecipeCard = (props) => {
-console.log('🚀 ~ file: loadedRecipeCard.js ~ line 4 ~ LoadedRecipeCard ~ props', props);
+const loadedResultCard = (props) => {
+console.log('🚀 ~ file: loadedResultCard.js ~ line 4 ~ loadedResultCard ~ props', props);
 
-    //? this component will take in an array of objects and return a loadedRecipeCard for each of the spoomn api results.
+    //? this component will take in an array of objects and return a loadedResultCard for each of the spoomn api results.
 
     return (
         <> {
                     <>
                     <h1>
-                    Now Rendering the Api Search Results
+                    {props.loadedResults.title}
                     <br></br>
                     </h1>
                     
                     <h4>Title:
                     <br></br>
-                    {props.loadedRecipes.title}
+                    {props.loadedResults.title}
                     </h4>
                     
 
                     <h4> Spoon ID number:
                     <br></br>
-                    {props.loadedRecipes.id}
+                    {props.loadedResults.id}
                     </h4>
 
                     <h4>Cook Time:
                     <br></br>
-                    {props.loadedRecipes.readyInMinutes}
+                    {props.loadedResults.readyInMinutes}
                     </h4>
 
                     <h4>servings:
                     <br></br>
-                    {props.loadedRecipes.servings}
+                    {props.loadedResults.servings}
                     </h4>
 
                     {/* <h4>Step 4:
                     <br></br>
-                    {props.loadedRecipes.analyzedInstructions[0].steps[0].step}
+                    {props.loadedResults.analyzedInstructions[0].steps[0].step}
                     </h4> */}
                     
                     <h4>Ingredients:
                     <br></br>
-                    {props.loadedRecipes.ingredients}
+                    {props.loadedResults.ingredients}
                     </h4>
                     
                     <h4> Missed Ingredients:
                     <br></br>
-                    {props.loadedRecipes.usedIngredientCount}
+                    {props.loadedResults.usedIngredientCount}
                     </h4>
                     
                     <h4> Used Ingredient Count:
                     <br></br>
-                    {props.loadedRecipes.usedIngredientCount}
+                    {props.loadedResults.usedIngredientCount}
                     </h4>
                     
                     
                     <h4> Weight Watcher Smart Points:
                     <br></br>
-                    {props.loadedRecipes.weightWatcherSmartPoints}
+                    {props.loadedResults.weightWatcherSmartPoints}
                     </h4>
-                    {/* {props.loadedRecipes.loadedRecipes.extendedIngredients} */}
+                    {/* {props.loadedResults.loadedResults.extendedIngredients} */}
                     
                     
                     </>
@@ -68,4 +68,4 @@ console.log('🚀 ~ file: loadedRecipeCard.js ~ line 4 ~ LoadedRecipeCard ~ prop
     )
 }
 
-export default LoadedRecipeCard
+export default loadedResultCard
