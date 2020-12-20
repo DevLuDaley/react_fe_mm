@@ -5,18 +5,27 @@ import LoadedRecipeCard from '../components/LoadedRecipeCard'
 
 const RecipeSearch = props => {
     const [loadedRecipes, setLoadedRecipes] = useState([])
+    const [name, setName] = useState("")
 
     useEffect(() => {
         props.loadRecipes()
-    }, []);
+    }
+    // , []
+    );
 
     const handleSearchSubmit = (e) => {
         e.preventDefault();
+        alert(`Submitting Name ${name}`)
+        // props.loadRecipes()
+        // e.target.value
         //props.loadRecipes()
     }
     
-    const handleChange = (e) => {
-    }
+    // const HandleChange = (e) => {
+    //     setName((name) => {
+    //         [name]: e.target.value
+    // }, []);
+    // }
 
     return (
         <Fragment>
@@ -33,7 +42,7 @@ const RecipeSearch = props => {
             <form id='new-meal-form' onSubmit={handleSearchSubmit}>
 
                 <label> Meal Name:</label> 
-                    <input type="text" placeholder='enter meal name...' value={1} name="name" onChange={handleChange}/>
+                    <input type="text" placeholder='enter meal name...' value={name} name="name" onChange={e => setName(e.target.value)}/>
                 {/* <label> Meal Category:</label> 
                     <input type="text" placeholder='enter category...' value={1} name="category" onChange={handleChange}/>
                 <label> Meal Url:</label> 
