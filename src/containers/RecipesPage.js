@@ -3,6 +3,7 @@ import React, { Component } from 'react'
 // import '../App.css'
 // import fetchRecipes from '../actions/fetchRecipes'
 import RecipesList from '../components/RecipesList';
+import RecipeSearch from './RecipeSearch';
 import NewRecipeForm from '../forms/NewRecipeForm';
 
 
@@ -20,9 +21,9 @@ class RecipesPage extends Component {
         return (<>
         <p> Recipes Page</p>
         <NewRecipeForm recipes={this.props.recipes}/>
+        <RecipeSearch recipes={this.props.recipes}/>
         <RecipesList recipes={this.props.recipes}/>
          </>);
     }
 }
- 
 export default RecipesPage;
