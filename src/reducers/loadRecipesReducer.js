@@ -4,7 +4,8 @@ export default function loadRecipesReducer(state = intialState, action) {
 // debugger
     switch (action.type) {
         case 'LOAD_RECIPES':
-            const baseQuery = action.payload["results"][0]
+            // const baseQuery = action.payload["results"][0]
+            const baseQuery = action.payload["results"]
 
         // console.log('🚀 ~ file: recipesLoadReducer.js ~ line 9 ~ recipesReducer ~ action.payload["results"][0]', baseQuery.analyzedInstructions);
 
