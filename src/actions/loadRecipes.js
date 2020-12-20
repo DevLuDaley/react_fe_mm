@@ -7,9 +7,11 @@ export function loadRecipes() {
     const loadUrl = baseUrl + 'complexSearch?' + spoonApiKey + '&query=pasta&fillIngredients=true&addRecipeInformation=true&instructionsRequired=true&number=1&offset=5'
     const bareUrl = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=7348ed883fef4febbd04a7cf6e85abdd&query=pasta&fillIngredients=true&addRecipeInformation=true&instructionsRequired=true&number=1&offset=5'
 
+    const spoonSearchUrl = 'https://api.spoonacular.com/recipes/complexSearch?apiKey=7348ed883fef4febbd04a7cf6e85abdd&query=pasta&fillIngredients=true&addRecipeInformation=true&instructionsRequired=true&number=5&offset=8'
+
     return(dispatch) => { 
         // fetch(loadUrl,
-        fetch(bareUrl,
+        fetch(spoonSearchUrl,
         // {
         //     headers: {
         //         "Content-Type": "application/json",
