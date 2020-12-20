@@ -7,12 +7,12 @@ const RecipeSearch = props => {
     const [loadedRecipes, setLoadedRecipes] = useState([])
 
     useEffect(() => {
-        // props.loadRecipes()
+        props.loadRecipes()
     }, []);
 
     const handleSearchSubmit = (e) => {
         e.preventDefault();
-        props.loadRecipes()
+        //props.loadRecipes()
     }
     
     const handleChange = (e) => {
@@ -47,7 +47,8 @@ const RecipeSearch = props => {
             </form>
               {
                   props.loadedRecipes ?
-                    <LoadedRecipeCard loadedRecipes={props.loadedRecipes}/>
+                  props.loadedRecipes.map(lr =>
+                    <LoadedRecipeCard loadedResults={lr}/>)
                   :
                     <h3> Click the button above to load recipes </h3>}
 {console.log('🚀 ~ file: RecipeSearch.js ~ line 51 ~ props.loadedRecipes', props.loadedRecipes)}
@@ -59,8 +60,11 @@ const RecipeSearch = props => {
 }
 
 const mapStateToProps = state => {
-    console.log('state.loadRecipes', state.loadRecipesReducer);
-    console.log('state.loadRecipes', state.loadRecipesReducer.loadedRecipes);
+    console.log('state.loadRecipesReducer 1', state.loadRecipesReducer);
+    console.log('state.loadRecipesReducer.loadedRecipes 2', state.loadRecipesReducer.loadedRecipes);
+    // const loadResults = state.loadRecipesReducer.loadedRecipes
+
+    // loadResults.map(load => load.title)
     return(
         {
             // meals: state.loadRecipesReducer.meals,
