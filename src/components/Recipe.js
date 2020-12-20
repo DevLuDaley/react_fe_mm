@@ -1,7 +1,7 @@
 import React, { Fragment, useState, useEffect } from 'react';
 // import {Redirect} from 'react-router-dom'
 import { connect , useSelector } from 'react-redux'
-// import UpdateRecipeForm from '../forms/UpdateRecipeForm'
+import UpdateRecipeForm from '../forms/UpdateRecipeForm'
 
 const Recipe = (props) => {
     return(
@@ -38,6 +38,11 @@ const Recipe = (props) => {
                 </p>
             : 'no recipe here bub' 
             }
+              {props.recipes ?
+    <UpdateRecipeForm />
+    //mealToUpdate={props.meals.find(meal => 
+    //     meal.id == props.match.params.id)}
+: null }
         </Fragment>
     )
 }
